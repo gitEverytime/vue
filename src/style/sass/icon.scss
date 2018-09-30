@@ -1,0 +1,304 @@
+/**********配置***********/
+$static_domain: "http://static.ibigtop.com/static/img/";
+
+/********** 雪碧图相关 ***********/
+$zoomRatio: 0.5;
+@mixin get-icon($positionX, $positionY, $width, $height) {
+       background-position:($positionX*$zoomRatio) ($positionY*$zoomRatio);
+       width: $width * $zoomRatio;
+       height: $height * $zoomRatio;
+}
+
+@mixin set-sprites($width, $height) {
+       background-size: ($width * $zoomRatio, $height * $zoomRatio);
+}
+
+.icon {background: url("#{$static_domain}icon/sprites.png") top left no-repeat;
+       @include set-sprites(1800px, 1800px)}
+
+
+/********icon*********/
+.icon-chat-on {@include get-icon(0, 0, 44px, 44px)}
+.icon-chat    {@include get-icon(-100px, 0, 44px, 44px)}
+.icon-find-on {@include get-icon(-200px, 0, 44px, 44px)}
+.icon-find    {@include get-icon(-300px, 0, 44px, 44px)}
+.icon-fu-on   {@include get-icon(-400px, 0, 57px, 60px)}
+.icon-fu      {@include get-icon(-500px, 0, 57px, 60px)}
+.icon-meal-on {@include get-icon(-600px, 0, 45px, 44px)}
+.icon-meal    {@include get-icon(-700px, 0, 45px, 44px)}
+.icon-call-on {@include get-icon(-800px, 0, 38px, 44px)}
+.icon-call    {@include get-icon(-900px, 0, 38px, 44px)}
+.icon-picture {@include get-icon(-1000px, 0, 60px, 60px)}
+.icon-smile   {@include get-icon(-1100px, 0, 60px, 60px)}
+.icon-man     {@include get-icon(-1200px, 0, 16px, 26px)}
+.icon-woman   {@include get-icon(-1300px, 0, 16px, 26px)}
+.icon-man-on  {@include get-icon(-1400px, 0, 26px, 26px)}
+.icon-woman-on{@include get-icon(-1500px, 0, 26px, 26px)}
+.icon-close-on{@include get-icon(-1600px, 0, 26px, 26px)}
+.icon-close   {@include get-icon(-1700px, 0, 24px, 24px)}
+
+
+/***私屏右侧菜单栏icon***/
+.icon-onscreen  {@include get-icon(0, -100px, 88px, 88px)}
+.icon-reward    {@include get-icon(-100px, -100px, 88px, 88px)}
+.icon-sing      {@include get-icon(-200px, -100px, 88px, 88px)}
+.icon-game      {@include get-icon(-300px, -100px, 88px, 88px)}
+.icon-microphone{@include get-icon(-400px, -100px, 88px, 88px)}
+.icon-actor     {@include get-icon(-500px, -100px, 88px, 88px)}
+.icon-mine      {@include get-icon(-600px, -100px, 88px, 88px)}
+.icon-wifi      {@include get-icon(-700px, -100px, 50px, 50px)}
+.icon-friend    {@include get-icon(-800px, -100px, 58px, 58px)}
+
+
+/********首页***********/
+.icon-music        {@include get-icon(-900px, -100px, 18px, 28px)}
+.icon-dance        {@include get-icon(-1000px, -100px, 18px, 28px)}
+.icon-arrow-down-no{@include get-icon(-1100px, -100px, 22px, 12px)}
+.icon-arrow-down   {@include get-icon(-1200px, -100px, 22px, 12px)}
+.icon-arrow-up-no  {@include get-icon(-1300px, -100px, 22px, 12px)}
+.icon-arrow-up     {@include get-icon(-1400px, -100px, 22px, 12px)}
+.icon-arrow-down2  {@include get-icon(-1500px, -100px, 21px, 21px)}
+.icon-arrow-up2    {@include get-icon(-1600px, -100px, 21px, 21px)}
+.icon-arrow-left   {@include get-icon(-1700px, -100px, 18px, 30px)}
+
+.icon-img           {@include get-icon(0px, -200px, 56px, 56px)}
+.icon-screen        {@include get-icon(-100px, -200px, 56px, 56px)}
+.icon-gift          {@include get-icon(-200px, -200px, 56px, 56px)}
+.icon-avatar        {@include get-icon(-300px, -200px, 52px, 56px)}
+.icon-camera        {@include get-icon(-400px, -200px, 40px, 32px)}
+.icon-good-on       {@include get-icon(-500px, -200px, 26px, 26px)}
+.icon-good          {@include get-icon(-600px, -200px, 26px, 26px)}
+.icon-cancel        {@include get-icon(-700px, -200px, 26px, 26px)}
+.icon-add-close     {@include get-icon(-800px, -200px, 60px, 60px)}
+.icon-add           {@include get-icon(-900px, -200px, 60px, 60px)}
+.icon-playing       {@include get-icon(-1000px, -200px, 49px, 31px)}
+.icon-add-video     {@include get-icon(-1100px, -200px, 42px, 40px)}
+.icon-add-image     {@include get-icon(-1200px, -200px, 44px, 40px)}
+.icon-add-only      {@include get-icon(-1300px, -200px, 38px, 38px)}
+.icon-unchecked     {@include get-icon(-1400px, -200px, 28px, 28px)}
+.icon-checked-square{@include get-icon(-1500px, -200px, 28px, 28px)}
+
+/**************个人中心***************/
+.icon-privilege-on   {@include get-icon(0px, -300px, 66px, 66px)}
+.icon-privilege      {@include get-icon(-100px, -300px, 66px, 66px)}
+.icon-wallet-on      {@include get-icon(-200px, -300px, 66px, 66px)}
+.icon-wallet         {@include get-icon(-300px, -300px, 66px, 66px)}
+.icon-knapsack-on    {@include get-icon(-400px, -300px, 66px, 66px)}
+.icon-knapsack       {@include get-icon(-500px, -300px, 66px, 66px)}
+.icon-trends-on      {@include get-icon(-600px, -300px, 66px, 66px)}
+.icon-trends         {@include get-icon(-700px, -300px, 66px, 66px)}
+.icon-manage-on      {@include get-icon(-800px, -300px, 66px, 66px)}
+.icon-manage         {@include get-icon(-900px, -300px, 66px, 66px)}
+.icon-arrow-mine-more{@include get-icon(-1000px, -300px, 12px, 20px)}
+.icon-arrow-more     {@include get-icon(-1100px, -300px, 14px, 24px)}
+.icon-arrow-down-mine{@include get-icon(-1200px, -300px, 19px, 12px)}
+.icon-arrow-up-mine  {@include get-icon(-1300px, -300px, 19px, 12px)}
+.icon-add-mine       {@include get-icon(-1400px, -300px, 18px, 18px)}
+.icon-woman-mine     {@include get-icon(-1500px, -300px, 21px, 32px)}
+.icon-man-mine       {@include get-icon(-1600px, -300px, 21px, 32px)}
+.icon-cash           {@include get-icon(-1700px, -300px, 88px, 72px)}
+
+/*******特权图标**********/
+.icon-week-gift-on         {@include get-icon(0px, -400px, 72px, 72px)}
+.icon-week-gift            {@include get-icon(-100px, -400px, 72px, 72px)}
+.icon-schedule-on          {@include get-icon(-200px, -400px, 72px, 72px)}
+.icon-schedule             {@include get-icon(-300px, -400px, 72px, 72px)}
+.icon-colorful-name-on     {@include get-icon(-400px, -400px, 72px, 72px)}
+.icon-colorful-name        {@include get-icon(-500px, -400px, 72px, 72px)}
+.icon-wechat-on            {@include get-icon(-600px, -400px, 72px, 72px)}
+.icon-wechat               {@include get-icon(-700px, -400px, 72px, 72px)}
+.icon-list-on              {@include get-icon(-800px, -400px, 72px, 72px)}
+.icon-list                 {@include get-icon(-900px, -400px, 72px, 72px)}
+.icon-level-medal-on       {@include get-icon(-1000px, -400px, 72px, 72px)}
+.icon-level-medal          {@include get-icon(-1100px, -400px, 72px, 72px)}
+.icon-reward-privilege-on  {@include get-icon(-1200px, -400px, 72px, 72px)}
+.icon-reward-privilege     {@include get-icon(-1300px, -400px, 72px, 72px)}
+.icon-hi-on                {@include get-icon(-1400px, -400px, 72px, 72px)}
+.icon-hi                   {@include get-icon(-1500px, -400px, 72px, 72px)}
+.icon-exclusive-emoticon-on{@include get-icon(-1600px, -400px, 72px, 72px)}
+.icon-exclusive-emoticon   {@include get-icon(-1700px, -400px, 72px, 72px)}
+.icon-rank-reward-on       {@include get-icon(-1600px, -500px, 72px, 72px)}
+.icon-rank-reward          {@include get-icon(-1700px, -500px, 72px, 72px)}
+
+.icon-prop            {@include get-icon(0px, -500px, 90px, 90px)}
+.icon-voucher         {@include get-icon(-100px, -500px, 90px, 90px)}
+.icon-membership-card {@include get-icon(-200px, -500px, 90px, 90px)}
+.icon-gift-green      {@include get-icon(-300px, -500px, 90px, 90px)}
+.icon-wallet-green    {@include get-icon(-400px, -500px, 58px, 58px)}
+.icon-calendar        {@include get-icon(-500px, -500px, 58px, 58px)}
+.icon-turn-out        {@include get-icon(-600px, -500px, 58px, 58px)}
+.icon-my-knapsack     {@include get-icon(-700px, -500px, 58px, 58px)}
+.icon-card-voucher    {@include get-icon(-800px, -500px, 58px, 58px)}
+.icon-membership-card2{@include get-icon(-900px, -500px, 58px, 58px)}
+.icon-bell            {@include get-icon(-1000px, -500px, 30px, 30px)}
+.icon-bell-on         {@include get-icon(-1100px, -500px, 30px, 30px)}
+.icon-grade           {@include get-icon(-1200px, -500px, 30px, 30px)}
+.icon-grade-on        {@include get-icon(-1300px, -500px, 30px, 30px)}
+.icon-follow          {@include get-icon(-1400px, -500px, 30px, 30px)}
+.icon-follow-on       {@include get-icon(-1500px, -500px, 30px, 30px)}
+
+/*********个人中心 管理**********/
+.icon-home            {@include get-icon(0px, -600px, 30px, 30px)}
+.icon-album           {@include get-icon(-100px, -600px, 30px, 30px)}
+.icon-order           {@include get-icon(-200px, -600px, 30px, 30px)}
+.icon-mine-green      {@include get-icon(-300px, -600px, 30px, 30px)}
+.icon-like            {@include get-icon(-400px, -600px, 30px, 30px)}
+.icon-program         {@include get-icon(-1600px, -600px, 30px, 30px)}
+.icon-music-m         {@include get-icon(-1700px, -600px, 30px, 30px)}
+.icon-video           {@include get-icon(0px, -700px, 30px, 30px)}
+.icon-message         {@include get-icon(-1500px, -700px, 30px, 30px)}
+
+.icon-checked         {@include get-icon(-1500px, -600px, 26px, 26px)}
+
+/*************个人等级图标*******************/
+.icon-level-lv0{@include get-icon(-500px, -600px, 27px, 28px)}
+.icon-level-lv1{@include get-icon(-600px, -600px, 27px, 28px)}
+.icon-level-lv2{@include get-icon(-700px, -600px, 27px, 28px)}
+.icon-level-lv3{@include get-icon(-800px, -600px, 27px, 28px)}
+.icon-level-lv4{@include get-icon(-900px, -600px, 27px, 28px)}
+.icon-level-lv5{@include get-icon(-1000px, -600px, 27px, 28px)}
+.icon-level-lv6{@include get-icon(-1100px, -600px, 27px, 28px)}
+.icon-level-lv7{@include get-icon(-1200px, -600px, 27px, 28px)}
+.icon-level-lv8{@include get-icon(-1300px, -600px, 27px, 28px)}
+.icon-level-lv9{@include get-icon(-1400px, -600px, 27px, 28px)}
+
+/****************模态框图标****************************/
+.icon-modal-time   {@include get-icon(-100px, -700px, 70px, 70px)}
+.icon-modal-coffee {@include get-icon(-200px, -700px, 70px, 76px)}
+.icon-modal-unpass {@include get-icon(-300px, -700px, 70px, 76px)}
+.icon-modal-going  {@include get-icon(-400px, -700px, 70px, 76px)}
+.icon-modal-file   {@include get-icon(-500px, -700px, 50px, 50px)}
+.icon-modal-music  {@include get-icon(-600px, -700px, 50px, 50px)}
+.icon-modal-video  {@include get-icon(-700px, -700px, 50px, 48px)}
+.icon-modal-wifi   {@include get-icon(-800px, -700px, 67px, 49px)}
+
+.icon-edit         {@include get-icon(-1200px, -700px, 30px, 30px)}
+.icon-delete       {@include get-icon(-1300px, -700px, 30px, 30px)}
+.icon-close-yellow {@include get-icon(-1400px, -700px, 24px, 24px)}
+
+
+.icon-tool-gift      {@include get-icon(0px, -800px, 44px, 44px)}
+.icon-tool-onscreen  {@include get-icon(-100px, -800px, 44px, 44px)}
+.icon-tool-microphone{@include get-icon(-200px, -800px, 44px, 44px)}
+.icon-man-white      {@include get-icon(-300px, -800px, 20px, 30px)}
+.icon-woman-white    {@include get-icon(-400px, -800px, 20px, 30px)}
+.icon-camera-select  {@include get-icon(-500px, -800px, 32px, 30px)}
+
+
+/******************点餐首页*********************/
+.icon-10-1 {@include get-icon(0px, -900px, 82px, 82px)}
+.icon-10-2 {@include get-icon(-100px, -900px, 82px, 82px)}
+.icon-10-3 {@include get-icon(-200px, -900px, 64px, 64px)}
+.icon-10-4 {@include get-icon(-300px, -900px, 64px, 64px)}
+.icon-10-5 {@include get-icon(-400px, -900px, 64px, 64px)}
+.icon-10-6 {@include get-icon(-500px, -900px, 64px, 64px)}
+.icon-10-7 {@include get-icon(-600px, -900px, 28px, 28px)}
+.icon-10-8 {@include get-icon(-700px, -900px, 30px, 30px)}
+.icon-10-9 {@include get-icon(-800px, -900px, 64px, 40px)}
+.icon-order-mile    {width: 85px; height: 87px}
+.icon-order-advance {width: 125px; height: 62px}
+.icon-order-form    {width: 125px; height: 62px}
+
+/**********************点餐页面***************************/
+.icon-10-10 {@include get-icon(-900px, -900px, 40px, 40px)}
+.icon-10-11 {@include get-icon(-1000px, -900px, 40px, 40px)}
+.icon-10-12 {@include get-icon(-1100px, -900px, 32px, 32px)}
+.icon-10-13 {@include get-icon(-1200px, -900px, 32px, 32px)}
+.icon-10-14 {@include get-icon(-1300px, -900px, 30px, 30px)}
+.icon-10-15 {@include get-icon(-1400px, -900px, 30px, 30px)}
+.icon-10-16 {@include get-icon(-1500px, -900px, 30px, 30px)}
+.icon-10-17 {@include get-icon(-1600px, -900px, 34px, 34px)}
+.icon-10-18 {@include get-icon(-1700px, -900px, 34px, 34px)}
+
+.icon-11-1  {@include get-icon(-0px, -1000px, 30px, 30px)}
+.icon-11-2  {@include get-icon(-100px, -1000px, 30px, 30px)}
+.icon-11-3  {@include get-icon(-200px, -1000px, 30px, 30px)}
+.icon-11-4  {@include get-icon(-300px, -1000px, 30px, 30px)}
+.icon-11-5  {@include get-icon(-400px, -1000px, 30px, 30px)}
+.icon-11-6  {@include get-icon(-500px, -1000px, 30px, 30px)}
+.icon-11-7  {@include get-icon(-600px, -1000px, 30px, 30px)}
+.icon-11-8  {@include get-icon(-700px, -1000px, 21px, 21px)}
+.icon-11-9  {@include get-icon(-800px, -1000px, 30px, 30px)}
+.icon-11-10 {@include get-icon(-900px, -1000px, 50px, 90px)}
+.icon-11-11 {@include get-icon(-1000px, -1000px, 50px, 90px)}
+.icon-11-12 {@include get-icon(-1100px, -1000px, 50px, 90px)}
+.icon-11-13 {@include get-icon(-1200px, -1000px, 50px, 90px)}
+.icon-11-14 {@include get-icon(-1300px, -1000px, 66px, 66px)}
+.icon-11-15 {@include get-icon(-1400px, -1000px, 66px, 66px)}
+.icon-11-16 {@include get-icon(-1500px, -1000px, 66px, 66px)}
+.icon-11-17 {@include get-icon(-1600px, -1000px, 66px, 66px)}
+.icon-11-18 {@include get-icon(-1700px, -1000px, 66px, 66px)}
+
+.icon-12-1  {@include get-icon(-0px, -1100px, 88px, 88px)}
+.icon-12-2  {@include get-icon(-100px, -1100px, 88px, 88px)}
+.icon-12-3  {@include get-icon(-200px, -1100px, 60px, 90px)}
+.icon-12-16 {@include get-icon(-1500px, -1100px, 60px, 90px)}
+.icon-12-4  {@include get-icon(-300px, -1100px, 60px, 50px)}
+.icon-12-5  {@include get-icon(-400px, -1100px, 60px, 44px)}
+.icon-12-6  {@include get-icon(-500px, -1100px, 60px, 44px)}
+.icon-12-7  {@include get-icon(-600px, -1100px, 60px, 44px)}
+.icon-12-8  {@include get-icon(-700px, -1100px, 60px, 70px)}
+.icon-12-9  {@include get-icon(-800px, -1100px, 60px, 50px)}
+.icon-12-10 {@include get-icon(-900px, -1100px, 60px, 50px)}
+.icon-12-11 {@include get-icon(-1000px, -1100px, 80px, 90px)}
+.icon-12-12 {@include get-icon(-1100px, -1100px, 60px, 50px)}
+.icon-12-13 {@include get-icon(-1200px, -1100px, 60px, 50px)}
+
+/******************游戏部分**********************/
+.icon-12-14 {@include get-icon(-1300px, -1100px, 20px, 20px)}
+.icon-12-15 {@include get-icon(-1400px, -1100px, 20px, 20px)}
+
+.icon-13-1  {@include get-icon(-0px, -1200px, 70px, 70px)}
+
+
+
+/****背景图片*****/
+.bgd {background-size: 100% 100%; background-repeat: no-repeat}
+
+
+@mixin setBgByDpr($className,  $imgName) {
+    [device="android"]
+    {
+        #{$className}{
+            background-image: url("#{$static_domain}new/#{$imgName}.webp")
+        }
+    }
+
+    [device="ios"]
+    {
+        #{$className}{
+            background-image: url("#{$static_domain}new/#{$imgName}.png")
+        }
+    }
+
+}
+
+
+
+@include setBgByDpr(".bg-private-bg", "bg");
+
+
+//.bg-private-bg {background-image: url("#{$static_domain}new/bg.webp")}
+.bg-no-follow  {background-image: url("#{$static_domain}new/empty.png")}
+.bg-more-rights{background-image: url("#{$static_domain}new/more-rights.png")}
+.bg-trophy     {background-image: url("#{$static_domain}new/bao.png")}
+.bg-grab       {background-image: url("#{$static_domain}new/grab.png")}
+.bg-no-sign    {background-image: url("#{$static_domain}new/sign-no.png")}
+.bg-success    {background-image: url("#{$static_domain}new/success.png")}
+.bg-big-red    {background-image: url("#{$static_domain}new/big-red.png")}
+.bg-no-program {background-image: url("#{$static_domain}new/program_no.png")}
+.bg-icon-cash  {background-image: url("#{$static_domain}new/icon_cash.png")}
+.bg-lucky-bag  {background-image: url("#{$static_domain}new/fudai.gif")}
+.bg-vip-man    {background-image: url("#{$static_domain}new/vip-man.png")}
+.bg-vip-woman  {background-image: url("#{$static_domain}new/vip-woman.png")}
+.bg-vip-bg     {background-image: url("#{$static_domain}new/card-bg.png")}
+.bg-number-bg  {background-image: url("#{$static_domain}new/number-bg.png")}
+.bg-history-no {background-image: url("#{$static_domain}new/history-no.png")}
+//.bg-invite-shake{background-image: url("#{$static_domain}new/shake.webp")}
+@include setBgByDpr(".bg-invite-shake", "shake");
+@include setBgByDpr(".bg-invite-heart", "print-heart");
+
+
+
+
+

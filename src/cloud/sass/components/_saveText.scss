@@ -1,0 +1,16 @@
+
+.save_form_item{
+  .el-form-item__label{
+    color: #FFFFFF;
+    text-align: left;
+  }
+  .el-input__inner{
+    @include set-wh(60px, 20px);
+    background:rgba(0,0,0,0.2); text-indent: 5px;
+    border: 1px solid #dedede; border-radius: 5px; color: #dedede;
+    padding: 0 3px;
+  }
+  .el-button{
+    padding: 0;
+  }
+}

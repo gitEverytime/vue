@@ -1,0 +1,90 @@
+.el-table__header{
+  background-color: transparent;
+}
+.el-table, .el-table__expanded-cell{
+  background-color: transparent;
+}
+.el-table th{
+  background-color: $deep_green;
+  color: #FFFFFF;
+}
+.el-table tr{
+  background-color: transparent;
+}
+.el-table__row:hover{
+  background: rgba(102, 102, 102, 0.3);
+}
+.el-table__body tr.current-row>td{
+  background: rgba(102, 102, 102, 0.3);
+}
+.el-table td, .el-table th.is-leaf{
+  //border-bottom: 2px solid $deep_green;
+  border-bottom: none;
+  color: #FFFFFF;
+}
+.el-table--enable-row-hover .el-table__body tr:hover>td{
+  background-color: transparent;
+}
+.el-table::before{
+  height: 0;
+}
+.el-table__expand-icon{
+  color: #FFFFFF;
+}
+.el-form-item__label{
+  color: $green;
+}
+.el-table .cell{
+  padding-left: 0;
+  padding-right: 0;
+  text-align: center;
+}
+.el-table_1_column_3 .cell,.el-table_2_column_8 .cell,.el-table_2_column_11 .cell{
+  text-align: left;
+  padding-left: 20px;
+}
+.pass{
+  color: $green !important;
+  text-decoration: underline !important;
+  display: inline-block;
+  margin-right: 10px;
+}
+.reject{
+  color: $orange !important;
+  text-decoration: underline !important;
+}
+.headimg{
+  width: 50px;
+  height: 50px;
+  border: #ef0065 solid 1px;
+}
+.el-table--enable-row-transition .el-table__body td .cell{
+  overflow: hidden;/*超出部分隐藏*/
+  white-space: nowrap;/*不换行*/
+  text-overflow:ellipsis;/*超出部分文字以...显示*/
+}
+
+/**
+表数据样式
+ */
+.report_table .el-table__header-wrapper{
+  border-top:$deep_green solid 1px;
+  border-bottom:$deep_green solid 1px;
+}
+.report_table .el-table__body-wrapper{
+  border-bottom:$deep_green solid 1px;
+}
+.report_table th{
+  background-color: transparent;
+  .cell{
+    color: $deep_green;
+  }
+}
+.report_table td, .report_table th{
+  padding:6px 0;
+}
+.report_table .el-table_1_column_1 .cell,
+.report_table .el-table_2_column_5 .cell
+{
+  text-align: left;
+}

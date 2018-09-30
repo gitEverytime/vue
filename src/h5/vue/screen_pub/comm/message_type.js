@@ -1,0 +1,76 @@
+/*
+ * @Author: jgg 
+ * @Date: 2018-04-08 15:49:19 
+ * @Last Modified by: jgg
+ * @Last Modified time: 2018-05-28 20:35:20
+ * @Describe  消息类型
+ */
+    
+export default {
+
+    SOCKET_E_ENTER:"E_ENTER", //进场消息  
+
+    SOCKET_E_TALK_PUBLIC:"E_CHAT_PUB", //公屏发言
+
+    SOCKET_E_TALK_PRIVATE:"E_TALK_PRIVATE", //私聊
+
+    SOCKET_E_SCREEN_ON:"E_SCREEN_ON", //上墙响应 
+
+    SOCKET_E_REWARD:"E_REWARD", //打赏响应
+
+    SOCKET_E_PROGRAM_BUY:"E_PROGRAM_BUY", //点节目
+
+    SOCKET_E_PACKAGE_PUBLIC:"E_PACKAGE_PUBLIC", //红包--世界
+
+    SOCKET_E_PACKAGE_PRIVATE:"E_PACKAGE_PRIVATE", //红包--个人
+
+    SOCKET_E_CLICK_POINT:"E_CLICK_POINT", //点赞
+
+    SOCKET_E_UNDO:"E_UNDO", //撤销消息
+
+    SOCKET_E_BM:"E_BM", //霸麦
+
+    E_SYS_GAME_INVITE: 'E_SYS_GAME_INVITE',  //游戏邀请
+    E_JUMP_TO_GAME: "E_JUMP_TO_GAME", //跳转到游戏公屏
+
+    E_SYS_MODULE_SET_TITLE:"E_SYS_MODULE_SET_TITLE",  //公屏标题跑马灯设置
+
+    E_SYS_MODULE_SET_BG:"E_SYS_MODULE_SET_BG",  //公屏背景设置
+
+ 
+    // 子组件间 socket 分发消息  规则 DISPATCH_UP_事件名称  [ UP上行DOWN ]下行
+
+    DISPATCH_DOWN_ENTER:"DISPATCH_DOWN_ENTER",           //下行  进场特效
+
+    DISPATCH_UP_SCREEN_ON:  "DISPATCH_UP_SCREEN_ON",  //上行  广播霸屏
+    DISPATCH_DOWN_SCREEN_ON:"DISPATCH_DOWN_SCREEN_ON",  //下行  派发霸屏
+
+    DISPATCH_DOWN_REWARD:"DISPATCH_DOWN_REWARD",       //下行  派发打赏
+
+    DISPATCH_UP_PUB_CHAT:"DISPATCH_UP_PUB_CHAT",       //上行  公聊
+    DISPATCH_DOWN_PUB_CHAT:"DISPATCH_DOWN_PUB_CHAT",  //下行  公聊
+    
+    DISPATCH_DOWN_PRI_CHAT:"DISPATCH_DOWN_PRI_CHAT",  //下行  私聊
+    DISPATCH_DOWN_PROGRAM_BUY:"DISPATCH_DOWN_PROGRAM_BUY",  //下行  购买节目
+
+    DISPATCH_DOWN_BM:"DISPATCH_DOWN_BM",  //下行  霸麦
+    DISPATCH_UP_BM:"DISPATCH_DOWN_BM",  //上行  霸麦
+
+    DISPATCH_DOWN_PUB_MSG_LIKE: "DISPATCH_DOWN_PUB_MSG_LIKE:", //下行 点赞
+    DISPATCH_DOWN_PUB_MSG_CANCEL: "DISPATCH_DOWN_PUB_MSG_CANCEL", //下行 撤销
+
+    DISPATCH_DOWN_RED_PACKAGE_PUB:"DISPATCH_DOWN_RED_PACKAGE_PUB",       //下行  红包 世界
+    DISPATCH_UP_RED_PACKAGE_PUB:"DISPATCH_UP_RED_PACKAGE_PUB",       //上行 红包 世界
+
+    DISPATCH_DOWN_RED_PACKAGE_PRI:"DISPATCH_DOWN_RED_PACKAGE_PRI",       //下行  红包 个人
+    DISPATCH_UP_RED_PACKAGE_PRI:"DISPATCH_UP_RED_PACKAGE_PRI",       //上行 红包 个人
+
+    CLIENT_WIN_CLOSE_ONSCREEN:"CLIENT_WIN_CLOSE_ONSCREEN",  //窗口关闭  霸屏礼物面板
+}
+
+
+    
+    
+    
+    
+    

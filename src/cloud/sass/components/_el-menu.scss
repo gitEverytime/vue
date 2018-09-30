@@ -1,0 +1,26 @@
+.el-menu-heng{
+  background-color: transparent;
+  padding:20px 0 0;
+  border-bottom:none;
+  .el-menu-item{
+    color: #FFFFFF;
+  }
+  .el-menu-item.is-active{
+    color:$green;
+    border-bottom:2px solid $green;
+  }
+  .el-menu-item:not(.is-disabled):focus, .el-menu--horizontal .el-menu-item:not(.is-disabled):hover{
+    background-color: transparent !important;
+    color:$green !important;
+  }
+  .el-menu-item:focus, .el-menu-item:hover{
+    background-color: transparent;
+  }
+}
+.el-menu--horizontal .el-menu-item:not(.is-disabled):focus, .el-menu--horizontal .el-menu-item:not(.is-disabled):hover{
+  background-color: transparent !important;
+  color:$green !important;
+}
+.el-badge__content{
+  border: none;
+}

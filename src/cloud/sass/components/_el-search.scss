@@ -1,0 +1,11 @@
+.searchText{
+  width: 234px;
+  .el-input__inner{
+    height: 32px;
+  }
+  .el-input-group__append{
+    background-color: #00B594;
+    color: #FFFFFF;
+    border: #00B594 solid 1px;
+  }
+}

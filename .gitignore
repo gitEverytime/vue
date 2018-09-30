@@ -1,0 +1,15 @@
+
+/node_modules/
+/dist/
+.DS_Store
+*.sh
+deploy.sh
+dist/im_t.js
+yarn-error.log
+webpack.config.js
+.idea
+
+webpack.config.js
+webpack.config.js
+webpack.config.js
+webpack.config.js

@@ -1,0 +1,98 @@
+.barWrap,.eatWrap{
+  position: absolute;
+  @include box-center(50%,50%);
+  z-index: 10;
+  display: none;
+}
+.giftHead{
+  position: absolute;
+  @include box-center(2%,50%);
+  @include set-width-height(280px,280px);
+  z-index: 20;
+  .re_bmHead{
+    position: relative;
+    @include set-width-height(100%,100%);
+    .headWrap{
+      position: absolute;
+      @include set-width-height(190px,190px);
+      @include box-center(52%,50%);
+      z-index: 10;
+      background-size:cover;
+      border-radius: 50%;
+    }
+    .ringImg{
+      @include set-width-height(100%,100%);
+      @include box-center(50%,50%);
+      position: absolute;
+      z-index: 20;
+      background-size: 100%,100%;
+    }
+    p{
+      color: #ffffff;
+      font-weight: bold;
+      font-size: 60px;
+      @include box-center(140%,50%);
+      position: absolute;
+      z-index: 30;
+      width: 500px;
+      text-shadow: 0 1px #000000, 1px 0 #000000, -1px 0 #000000, 0 -1px #000000;
+      @include hiddenLineMax;
+      .content{
+        color: #ffffff;
+        font-size: 60px;
+        text-shadow:#000 1px 1px 1px;
+      }
+    }
+  }
+}
+.giftFooter{
+  z-index: 20;
+  position: absolute;
+  @include box-center(95%,50%);
+}
+.rewardText{
+  padding: 22px 68px;
+  background:rgba(34,24,33,1);
+  opacity:0.9;
+  border-radius:20px;
+  max-width: 900px;
+  p{
+    font-size:46px;
+    color:rgba(221,221,221,1);
+    font-weight: bold;
+    .reward_name{
+      color: #D8D854;
+    }
+    span{
+      color: #01B695;
+      .reward_name{}
+      .tableName{
+        display: none;
+      }
+    }
+    .count{
+      display: none;
+    }
+  }
+}
+.giftCont{
+  margin: 40px auto 0;
+  width: 800px;
+  font-size: 60px;
+  color: #ffffff;
+  z-index: 20;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: #000 1px 1px 1px;
+}
+.giftRewardWrap{display: none;@include set-width-height(100%,100%);}
+.giftReward_container{
+  overflow: hidden;
+  @include set-width-height(100%,100%);
+  position: relative;
+  #EFF-video{
+    position: absolute;
+    @include box-center(50%,50%);
+    @include set-width-height(100%,100%);
+  }
+}

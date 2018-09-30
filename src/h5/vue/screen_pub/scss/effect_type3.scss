@@ -1,0 +1,334 @@
+.ab_screenUserInfo{
+  @include set-width-height(100%,100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10200;
+}
+.re_screenUserInfo{
+  position: relative;
+  @include set-width-height(100%, 100%);
+}
+.count_down{
+  font-size:60px;
+  color:rgba(245,245,245,1);
+  padding: 10px 40px;
+  background:rgba(34,24,33,0.6);
+  font-weight: bold;
+  border-radius:8px;
+  position: absolute;
+  top:100px;
+  right: 150px;
+  z-index: 10009;
+  border: #F5F5F5 solid 2px;
+}
+.re_screenUserInfo .ab_userInfo{
+  position: absolute;
+  @include set-width-height(720px,350px);
+  z-index: 10200;
+}
+.re_userInfo{
+  position: relative;
+}
+.re_userInfo .ab_head{
+  position: absolute;
+  @include set-width-height(280px,324px);
+  top: 20px; left:20px;
+  border-radius: 50%;
+}
+.re-head{position: relative; @include set-width-height(100%,100%)}
+.re-head .head_img{
+  position: absolute;
+  @include box-center(50%,50%);
+  @include set-width-height(190px,190px);
+  z-index: 5;
+  border-radius: 50%;
+}
+.re-head .head-ring{
+  position: absolute;
+  @include box-center(50%,50%);
+  @include set-width-height(280px,324px);
+  z-index: 10;
+}
+
+.re_userInfo h2{
+  position: absolute;
+  top: 50px;
+  right: 0;
+  @include set-width-height(300px,142px);
+  background: url("http://static.ibigtop.com/static/img/public/effect/onscreen/img/b002_name.png") no-repeat;
+  background-size: 100% 100%;
+  font-size: 34px;
+  font-weight: bold;
+  color: #fff;
+  line-height: 142px;
+  text-align: center;
+}
+.re_userInfo p{
+  position: absolute;
+  top: 150px;
+  right: 0;
+  @include set-width-height(400px,142px);
+  background: url("http://static.ibigtop.com/static/img/public/effect/onscreen/img/b002_content.png") no-repeat;
+  background-size: 100% 100%;
+  font-size: 36px;
+  font-weight: bold;
+  color: #fff;
+  line-height: 142px;
+  text-align: center;
+}
+
+.text_effect{
+  position: absolute;
+  font-size:45px;
+  font-weight: bold;
+  color: #FFFFFF;
+  border-radius: 8px;
+  @include box-center(90%,50%);
+  z-index: 10002;
+}
+.pic_effect{
+  position: absolute;
+  font-size: 60px;
+  font-weight: bold;
+  color: #FFFFFF;
+  border-radius: 8px;
+  @include box-center(40%,50%);
+  z-index: 10018;
+  @include set-width-height(900px,600px);
+}
+.text1_effect{
+  position: absolute;
+  font-size: 40px;
+  font-weight: bold;
+  color: #FFFFFF;
+  border-radius: 8px;
+  @include box-center(80%,50%);
+  z-index: 10002;
+}
+.pic_wrap{
+  position: relative;
+  @include set-width-height(100%,100%)
+}
+.pic_wrap .effect_img{
+  border-radius: 4px;
+  //display: none;
+  img{
+    border-radius: 4px;
+  }
+}
+.animate_0{
+  z-index: 10002;
+  position: absolute;
+  @include box-center(50%,50%);
+  animation: roll 10s linear infinite;
+  transform: translate3d(-50%,-50%,-50px) rotateZ(10deg) rotateY(0deg);
+}
+.animate_1{
+  position: absolute;
+  @include box-center(50%,50%);
+  animation: roll2 10s linear infinite;
+  transform: translate3d(-50%,-50%,-50px) rotate(0deg);
+}
+.animate_2{
+  position: absolute;
+  @include box-center(50%,50%);
+  animation: roll3 10s linear infinite;
+  transform: translate3d(-50%,-200%,-50px) rotate(0deg);
+}
+.animate_3{
+  position: absolute;
+  @include box-center(50%,50%);
+  animation: roll4 10s linear infinite;
+  transform: translate3d(-200%,-50%,0px) rotate(0deg);
+}
+.pic_wrap .text{
+  position: absolute;
+  @include box-center(90%,50%);
+  z-index: 10003;
+  text-align: center;
+  span{
+    display: block;
+  }
+}
+.animate_pulse{
+  animation-name: oPulse;
+  -webkit-animation-name: oPulse;
+  animation-duration: 2s;
+  -webkit-animation-duration: 2s;
+  animation-timing-function: linear;
+  -webkit-animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  visibility: visible !important;
+}
+@keyframes oPulse {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.9);
+    opacity: 0.9;
+  }
+}
+.animate_floater{
+  animation-name: ofloater;
+  -webkit-animation-name: ofloater;
+  animation-duration: 1.5s;
+  -webkit-animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  visibility: visible !important;
+}
+
+@keyframes ofloater{
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(8%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes roll {
+5%{
+    transform: translate3d(-50%,-50%,-50px) rotateZ(10deg) rotateY(0deg) scale(1);
+    opacity: 0.6;
+}
+90% {
+    transform: translate3d(-50%,-50%,-10px) rotateZ(2deg) rotateY(-5deg) scale(1.5);
+    opacity: 0.9;
+  }
+95% {
+    transform: translate3d(-50%,-50%,-5px) rotateZ(0deg) rotateY(-5deg) scale(3);
+    opacity: 1;
+  }
+100% {
+     transform: translate3d(-50%,-50%,0px) rotateZ(0deg) rotateY(-5deg);
+     opacity: 0.6;
+   }
+}
+
+@keyframes roll2 {
+  0%{
+    //transform: translate3d(-50%,-50%,-50px) rotateZ(10deg) rotateY(0deg) scale(1);
+    opacity: 0.4;
+    transform: translate3d(-50%,-50%,-50px) rotate(0deg) scale(1) ;
+  }
+  15% {
+    transform: translate3d(-50%,-50%,-50px) rotate(90deg) scale(1.2) ;
+    opacity: 0.6;
+  }
+  30% {
+    transform: translate3d(-50%,-50%,-50px) rotate(180deg) scale(1.4) ;
+    opacity: 0.9;
+  }
+  45% {
+    transform: translate3d(-50%,-50%,-50px) rotate(270deg) scale(1.6) ;
+    opacity: 0.8;
+  }
+  60% {
+    transform: translate3d(-50%,-50%,-50px) rotate(360deg) scale(1.8) ;
+    opacity: 1;
+  }
+  80% {
+    transform: translate3d(-50%,-50%,-50px) rotate(360deg) scale(1.8) ;
+    opacity: 1;
+  }
+  90%{
+    transform: translate3d(-50%,-50%,-50px) rotate(-360deg) scale(1) ;
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}
+@keyframes roll3 {
+  0%{
+    opacity: 0.2;
+    transform: translate3d(-50%,-200%,-50px) rotate(0deg) scale(1) ;
+  }
+  15% {
+    transform: translate3d(-50%,-162.5%,-px) rotate(90deg) scale(1.2) ;
+    opacity: 0.4;
+  }
+  30% {
+    transform: translate3d(-50%,-125%,-50px) rotate(180deg) scale(1.4) ;
+    opacity: 0.6;
+  }
+  45% {
+    transform: translate3d(-50%,-87%,-50px) rotate(270deg) scale(1.6) ;
+    opacity: 0.8;
+  }
+  60% {
+    transform: translate3d(-50%,-50%,-50px) rotate(360deg) scale(1.8) ;
+    opacity: 1;
+  }
+  80% {
+    transform: translate3d(-50%,-50%,-50px) rotate(360deg) scale(1.8) ;
+    opacity: 1;
+  }
+  90%{
+    transform: translate3d(-50%,-200%,-50px) rotate(-360deg) scale(1) ;
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}
+@keyframes roll4 {
+  0%{
+    opacity: 0.2;
+    transform: translate3d(-200%,-50%,0px) rotate(0deg) scale(1) ;
+  }
+  15% {
+    transform: translate3d(-162.5,-50%,0px) rotate(90deg) scale(1.2) ;
+    opacity: 0.4;
+  }
+  30% {
+    transform: translate3d(-125%,-50%,0px) rotate(180deg) scale(1.4) ;
+    opacity: 0.6;
+  }
+  45% {
+    transform: translate3d(-87%,-50%,0px) rotate(270deg) scale(1.6) ;
+    opacity: 0.8;
+  }
+  60% {
+    transform: translate3d(-50%,-50%,0px) rotate(360deg) scale(1.8) ;
+    opacity: 1;
+  }
+  80% {
+    transform: translate3d(-50%,-50%,0px) rotate(360deg) scale(1.8) ;
+    opacity: 1;
+  }
+  90%{
+    transform: translate3d(-200%,-50%,0px) rotate(-360deg) scale(1) ;
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}
+.firstScreenBack,.secondScreenBack{
+  display: none;
+}
+.G-effect{
+  @include set-width-height(100%,100%);
+}
+.screen_container{
+  overflow: hidden;
+  @include set-width-height(100%,100%);
+  position: relative;
+  .firstScreenBack,.secondScreenBack{
+    position: absolute;
+    @include box-center(50%,50%);
+  }
+}

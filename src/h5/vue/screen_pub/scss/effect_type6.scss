@@ -1,0 +1,190 @@
+.gitReward{
+  position: absolute;
+  @include set-width-height(800px,100%);
+  @include box-center(50%,50%);
+  z-index: 999;
+}
+.gitReward .reward{
+  position: relative;
+  @include set-width-height(100%,100%);
+}
+.reward-person{
+  position: fixed;
+  top: 50px;
+  left: 0;
+}
+.reward-person .beReward-head{
+  @include set-width-height(150px,150px);
+  position: relative;
+  border-radius:50%;
+  animation:myfirst2 2.6s;
+  opacity: 1
+}
+.nickName{
+  position: absolute;
+  z-index: 50;
+  width: 120px;
+  height: 42px;
+  font-size: 33px;
+  font-weight: bold;
+  color: #FFFFFF;
+  @include hiddenLineMax;
+  @include layout-flex-c-center;
+  text-align: center;
+  background:#f5c12d;
+  border-radius: 4px;
+  @include box-center(114%,50%);
+  text-shadow:#000 1px 1px 1px;
+}
+.progress{
+  position: absolute;
+  z-index: 5;
+  left: 20px;
+  height: 100px;
+  top: 25px;
+  width: 740px;
+  animation:myfirst3 2.6s;
+  background: url("http://static.ibigtop.com/static/img/public/game/jiantoubg.png") no-repeat;
+  background-size: 100% 100%;
+  .progress-text{
+    background: url("http://static.ibigtop.com/static/img/public/game/jiantou.gif") no-repeat;
+    background-size: 100% 100%;
+    @include set-width-height(100%,100%);
+    color: #FFFFFF;
+    font-size: 43px;
+    font-weight: bold;
+    @include layout-flex-c-center;
+    text-align: center;
+    @include hiddenLineMax;
+  }
+}
+
+
+.gitReward .reward .beReward{
+  animation:myfirst1 2.6s;
+  -moz-animation:myfirst1 2.6s; // Firefox *!*/
+  -webkit-animation:myfirst1 2.6s; //Safari and Chrome *!*/
+  -o-animation:myfirst1 2.6s;  // Opera *!*/
+  position: fixed;
+  top: 50px; right: 0;
+  transform:scale(1.5);
+  z-index: 30;
+}
+.gitReward .reward .beReward .beReward-head{
+  @include set-width-height(150px,150px);
+  position: relative;
+  border-radius:50%;
+  margin: 0 auto;
+  animation:myfirst 1.3s;
+  -moz-animation:myfirst 1.3s; //!* Firefox *!*/
+  -webkit-animation:myfirst 1.3s; // Safari and Chrome *!*/
+  /*-o-animation:myfirst 1.5s; // Opera *!*/
+}
+.actorName{
+  position: absolute;
+  z-index: 50;
+  width: 120px;
+  height: 40px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #FFFFFF;
+  @include hiddenLineMax;
+  text-align: center;
+  line-height: 40px;
+  background:#f5c12d;
+  border-radius: 4px;
+  @include box-center(114%,50%);
+  display: none;
+  text-shadow:#000 1px 1px 1px;
+}
+.head-img,.beReward-img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  border-radius: 50%;
+  @include set-width-height(96%,96%);
+  @include box-center(50%,50%);
+  display: none;
+}
+.reward-chat{
+  width: 800px;
+  position: absolute;
+  @include box-center(30%,50%);
+  font-size: 64px;
+  font-weight: bold;
+  color: #FFFFFF;
+  animation:myfirst4 2.6s;
+  text-shadow:#000 1px 1px 1px;
+}
+.mask-img,.full-court,.be-mask-img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  @include set-width-height(100%,100%);
+  display: none;
+}
+.be-mask-img{display: block}
+@keyframes myfirst
+{
+  0%   {transform:scale(1);}
+  20%  {transform:scale(3);}
+  70%  {transform:scale(3);}
+  100%  {transform:scale(1);}
+}
+@keyframes myfirst1
+{
+  0%   {
+    position: absolute;
+    @include box-center(50%,50%);
+  }
+  50%{
+    position: absolute;
+    @include box-center(50%,50%);
+  }
+  70%  {
+    position: absolute;
+    @include box-center(50%,50%);
+  }
+  100%  {
+    position: fixed;
+    top: 50px; right: 0;
+    transform:scale(1.5);
+  }
+}
+@keyframes myfirst2
+{
+  0%   {transform:scale(1); opacity: 0}
+  45%  {transform:scale(1); opacity: 0}
+  70%  {transform:scale(1.2);opacity: 1}
+  100%  {transform:scale(1); }
+}
+
+@keyframes myfirst3
+{
+  0%   { width: 0;}
+  70%  {width: 0; }
+  100%  {width: 740px;}
+}
+@keyframes myfirst4
+{
+  0%   { opacity: 0}
+  50%  {opacity: 0}
+  100%  {opacity: 1 }
+}
+.giftEffect{
+  position: absolute;
+  @include box-center(50%,50%);
+}
+.rewradWrap{display: none;@include set-width-height(100%,100%);}
+.rewrad_container{
+  overflow: hidden;
+  @include set-width-height(100%,100%);
+  position: relative;
+  #EFF-video{
+    position: absolute;
+    @include box-center(50%,50%);
+    @include set-width-height(100%,100%);
+  }
+}

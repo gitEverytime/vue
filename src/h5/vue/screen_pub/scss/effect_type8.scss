@@ -1,0 +1,114 @@
+//.bmRealTalkVideo,.bmGoodVoiceVideo{
+//  display: none;
+//
+//}
+.bm_container{
+  overflow: hidden;
+  @include set-width-height(100%,100%);
+  position: relative;
+  .bmRealTalkVideo,.bmGoodVoiceVideo{
+    position: absolute;
+    @include box-center(50%,50%);
+    @include set-width-height(100%,100%);
+    z-index: 5;
+  }
+}
+.bmRealTalkHead,.bmGoodVoiceHead{
+  position: absolute;
+  @include box-center(2%,50%);
+  @include set-width-height(280px,280px);
+  z-index: 20;
+  .re_bmHead{
+    position: relative;
+    @include set-width-height(100%,100%);
+    .headWrap{
+      position: absolute;
+      @include set-width-height(190px,190px);
+      @include box-center(52%,50%);
+      z-index: 10;
+      background-size:cover;
+      border-radius: 50%;
+    }
+    .ringImg{
+      @include set-width-height(100%,100%);
+      @include box-center(50%,50%);
+      position: absolute;
+      z-index: 20;
+      background-size: 100%,100%;
+    }
+    p{
+      color: #ffffff;
+      font-weight: bold;
+      font-size: 60px;
+      @include box-center(140%,50%);
+      position: absolute;
+      z-index: 30;
+      width: 500px;
+      .content{
+        color: #ffffff;
+        font-size: 60px;
+      }
+    }
+  }
+}
+.bmFooter{
+  position: absolute;
+  @include box-center(85%,50%);
+  text-align: center;
+}
+.bmText{
+  letter-spacing: 8px;
+  padding: 20px 37px;
+  background:rgba(34,24,33,0.9);
+  display: inline-block;
+  border-radius:20px;
+  color: #FFFFFF;
+  font-size:54px;
+  font-weight:bold;
+  .song{
+    color: #ff33dd;
+    display: inline-block;
+    font-size:54px;
+    font-weight:bold;
+  }
+}
+.real_text{
+  margin: 0 auto;
+  width:288px;
+  height:94px;
+  background:rgba(34,24,33,1);
+  opacity:0.7;
+  border-radius:20px;
+  font-size:50px;
+  color:rgba(30,254,0,1);
+  text-align: center;
+  span{
+    display: inline-block;
+    line-height:94px;
+    font-weight: bold;
+  }
+}
+.content{
+  color: #ffffff;
+  padding-top: 80px;
+  font-size: 60px;
+  display: inline-block;
+  font-weight: bold;
+  width: 900px;
+  margin: 0 auto;
+}
+.bmRealTalkGif{
+  position: absolute;
+  top: 0;
+  right: 50px;
+  z-index: 20;
+}
+.bmGoodVoiceGif{
+  position: absolute;
+  @include box-center(60%,50%);
+  z-index: 20;
+}
+.G-effect-bm{
+  display: none;
+  @include set-width-height(100%,100%)
+}

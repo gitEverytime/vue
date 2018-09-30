@@ -1,0 +1,117 @@
+/*鏈€澶栧眰瀹瑰櫒鏍峰紡*/
+.wrap{
+  width: 650px;
+  height: 200px;
+  /*鏀瑰彉宸﹀彸涓婁笅,鍥剧墖鏂瑰潡绉诲姩*/
+  position: absolute;
+  @include box-center(30%,50%);
+  z-index: 10020;
+}
+/*鍖呰９鎵€鏈夊鍣ㄦ牱寮�*/
+.cube{
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+  z-index:10020;
+  transform-style: preserve-3d;
+  transform: rotateX(-30deg) rotateY(-80deg);
+  -webkit-animation: rotate 20s infinite;
+  /*鍖€閫�*/
+  animation-timing-function: linear;
+}
+@-webkit-keyframes rotate{
+  from{transform: rotateX(0deg) rotateY(0deg);}
+  to{transform: rotateX(360deg) rotateY(360deg);}
+}
+.cube div{
+  position: absolute;
+  width:500px;
+  height: 500px;
+  opacity: 0.8;
+  transition: all .4s;
+}
+/*瀹氫箟鎵€鏈夊浘鐗囨牱寮�*/
+.pic{
+  width: 500px;
+  height: 500px;
+}
+.cube .out_front{
+  transform: rotateY(0deg) translateZ(250px);
+}
+.cube .out_back{
+  transform: translateZ(-250px) rotateY(180deg);
+}
+.cube .out_left{
+  transform: rotateY(90deg) translateZ(250px);
+}
+.cube .out_right{
+  transform: rotateY(-90deg) translateZ(250px);
+}
+.cube .out_top{
+  transform: rotateX(90deg) translateZ(250px);
+}
+.cube .out_bottom{
+  transform: rotateX(-90deg) translateZ(250px);
+}
+/*瀹氫箟灏忔鏂逛綋鏍峰紡*/
+.cube span{
+  display: block;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+.cube .in_pic{
+  width: 300px;
+  height: 300px;
+}
+.cube .in_front{
+  transform: rotateY(0deg) translateZ(150px);
+}
+.cube .in_back{
+  transform: translateZ(-150px) rotateY(180deg);
+}
+.cube .in_left{
+  transform: rotateY(90deg) translateZ(150px);
+}
+.cube .in_right{
+  transform: rotateY(-90deg) translateZ(150px);
+}
+.cube .in_top{
+  transform: rotateX(90deg) translateZ(150px);
+}
+.cube .in_bottom{
+  transform: rotateX(-90deg) translateZ(150px);
+}
+@keyframes ofloater{
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(8%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+/*榧犳爣绉诲叆鍚庢牱寮�*/
+.cubeHover .out_front{
+  transform: rotateY(0deg) translateZ(1000px);
+}
+.cubeHover .out_back{
+  transform: translateZ(-1000px) rotateY(180deg);
+}
+.cubeHover .out_left{
+  transform: rotateY(90deg) translateZ(1000px);
+}
+.cubeHover .out_right{
+  transform: rotateY(-90deg) translateZ(1000px);
+}
+.cubeHover .out_top{
+  transform: rotateX(90deg) translateZ(1000px);
+}
+.cubeHover .out_bottom{
+  transform: rotateX(-90deg) translateZ(1000px);
+}

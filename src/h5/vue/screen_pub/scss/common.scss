@@ -1,0 +1,30 @@
+html {
+  font-size: 100%;
+}
+
+body {
+  font-size: 1em;
+}
+@import "../../../../style/sass/mixin";
+/**
+打赏样式
+ */
+@import "./effect_type6";
+/**
+霸屏样式
+ */
+@import "./effect_type3";
+@import "./effect_type1";
+@import "./effect_type8";
+@import "./effect_type5";
+@import "./effect_type7";
+@import "./style";
+@import "./cube";
+@import "simple";
+
+/**
+
+ */
+@import "./effect";
+
+@import "./slider";

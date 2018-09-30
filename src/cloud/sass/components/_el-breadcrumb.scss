@@ -1,0 +1,9 @@
+.el-breadcrumb{
+  padding: 20px 0;
+  .el-breadcrumb__inner a, .el-breadcrumb__inner.is-link{
+    color: #ffffff;
+  }
+  .el-breadcrumb__item:last-child .el-breadcrumb__inner{
+    color: $green;
+  }
+}

@@ -1,0 +1,11 @@
+.el-input-number{
+  line-height: 28px;
+  width: 140px;
+  .el-input__inner{
+    width:140px !important;
+  }
+}
+.el-input-number__decrease, .el-input-number__increase{
+  width: 30px;
+  background: transparent;
+}

@@ -1,0 +1,29 @@
+.com_title {
+  margin: 20px 0 20px 0;
+  height: 30px;
+  line-height: 30px;
+  font-size: 18px;
+  text-indent: 10px;
+  color: #FF5722;
+  border-left: 2px solid #FF5722;
+  span {
+    color: #787B80;
+    display: inline;
+    padding-left: 20px;
+  }
+}
+
+.new_title{
+  margin: 20px 0 20px 0;
+  height: 25px;
+  line-height: 25px;
+  font-size: 16px;
+  text-indent: 10px;
+  color: #FFFFFF;
+  border-left:4px solid $green;
+  span {
+    color: #FFFFFF;
+    display: inline;
+    padding-left: 20px;
+  }
+}

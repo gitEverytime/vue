@@ -1,0 +1,12 @@
+.el-step{
+  padding-bottom: 30px;
+  .is-success{
+    color: $green;
+    border-color: $green;
+  }
+  .el-step__icon{
+    @include set-width-height(40px,40px);
+    font-size: 18px;
+    background: $light_gray
+  }
+}

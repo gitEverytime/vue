@@ -1,0 +1,13 @@
+.el-button--primary{
+  background-color: $green;
+}
+.el-button--danger{
+  background-color: $orange;
+  border-color: $orange;
+}
+.el-button--primary:focus, .el-button--primary:hover{
+  background-color: $green;
+}
+.el-button{
+  border: none;
+}

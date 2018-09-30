@@ -1,0 +1,27 @@
+.el-input--mini .el-input__inner {
+  background: transparent;
+  color: #d3cdcd;
+  border-color: #635a66;
+}
+
+.el-input.is-disabled .el-input__inner{
+  background: transparent;
+  color: #635a66;
+  border-color: #635a66;
+}
+
+.el-input-number--mini .el-input-number__decrease, .el-input-number--mini .el-input-number__increase {
+  background: transparent;
+  color: #d3cdcd;
+  border-color: #635a66;
+}
+
+.el-input-number.is-disabled .el-input-number__decrease, .el-input-number.is-disabled .el-input-number__increase {
+  background: transparent;
+  color: #635a66;
+  border-color: #635a66;
+}
+
+.el-input-number__decrease:hover:not(.is-disabled)~.el-input .el-input__inner:not(.is-disabled), .el-input-number__increase:hover:not(.is-disabled)~.el-input .el-input__inner:not(.is-disabled) {
+  border-color: #01b695;
+}

@@ -1,0 +1,321 @@
+$deep_green:#164648;
+$green:#00B594;
+$orange:#CD533E;
+$gray:#655F63;
+$light_gray:#aaaaaa;
+$dark_gray:#134349;
+$back_green:rgba(0,181,148,0.9);
+  //居中
+.transform_center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+}
+$second-background: #221821;
+
+/**************************************************************/
+/*****************************按钮*****************************/
+/**************************************************************/
+
+//基础按钮
+@mixin base-button($color, $bgColor, $w:90px, $h:38px ){
+  display: inline-block;
+  width: $w;
+  height: $h;
+  line-height: $h;
+  color: $color;
+  font: 14px Helvetica Neue,Helvetica,PingFang SC,微软雅黑,Tahoma,Arial,sans-serif;
+  text-align: center;
+  background: $bgColor;
+  border: 0;
+  cursor: pointer;
+  &:hover{
+    font-size: 15px;
+  }
+
+}
+
+
+/**************************************************************/
+/*****************************布局*****************************/
+/**************************************************************/
+
+//布局  flex
+@mixin layout-flex{
+  display: flex;
+  display: -webkit-flex;
+}
+
+@mixin wrap-wrap{
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+}
+
+//布局 水平方向
+@mixin layout-flex-r{
+  @include layout-flex;
+  flex-direction: row;
+}
+
+//布局 水平方向 反转
+@mixin layout-flex-r-reverse{
+  @include layout-flex;
+  flex-direction: row-reverse;
+}
+
+//布局 水平 右
+@mixin layout-flex-r-left{
+  @include layout-flex-r;
+  justify-content: left;
+}
+
+//布局 水平居中
+@mixin layout-flex-r-center{
+  @include layout-flex-r;
+  justify-content: center;
+}
+
+//布局 水平 右
+@mixin layout-flex-r-right{
+  @include layout-flex-r;
+  justify-content: right;
+}
+
+//布局 水平 end
+@mixin layout-flex-r-fd{
+  @include layout-flex-r;
+  justify-content: flex-end;
+}
+
+//布局 水平 两端对齐
+@mixin layout-flex-r-sb{
+  @include layout-flex-r;
+  justify-content:space-between;
+}
+
+//布局 水平 均匀分布
+@mixin layout-flex-r-sa{
+  @include layout-flex-r;
+  justify-content:space-around;
+}
+
+
+//布局 垂直方向
+@mixin layout-flex-c{
+  @include layout-flex;
+  flex-direction: column;
+}
+
+
+//布局 垂直居中
+@mixin layout-flex-c-center{
+  @include layout-flex-c;
+  justify-content: center;
+}
+
+//布局 垂直两端
+@mixin layout-flex-c-sb{
+  @include layout-flex-c;
+  justify-content: space-between;
+}
+
+//布局  均匀
+@mixin layout-flex-c-sa{
+  @include layout-flex-c;
+  justify-content: space-around
+}
+
+//布局  均匀
+@mixin layout-flex-c-sa{
+  @include layout-flex-c;
+  justify-content: space-around
+}
+
+//布局 水平方向换行
+@mixin layout-flex-r-wrap{
+  @include wrap-wrap;
+  @include layout-flex-r;
+}
+
+/**************************************************************/
+/*****************************面板*****************************/
+/**************************************************************/
+
+@mixin panel-mask{
+  @include layout-flex;
+  position: absolute; top: 0; left: 0;
+  margin: auto;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, .4);
+}
+
+@mixin panel-a($w, $h ){
+  width: $w;
+  height: $h;
+  border: 1px solid #F5F5F5;
+  border-radius: 5px;
+  background: #E5E5E5;
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+}
+
+
+
+@mixin box-shadow-1{
+  box-shadow: 0 4px 8px 0 rgba(7,17,27,.1);
+}
+
+
+
+@mixin font-dpr($font-size){
+  font-size: $font-size;
+  [data-dpr="2"] & {
+    font-size: $font-size * 2;
+  }
+
+  [data-dpr="3"] & {
+    font-size: $font-size * 3;
+  }
+}
+
+@mixin set-h($h){
+  height: $h;
+  line-height: $h;
+}
+
+@mixin set-wh($w,$h){
+  width:$w;
+  height: $h;
+  line-height: $h;
+}
+
+@mixin set-height($height){
+  height: $height;
+}
+
+@mixin set-width($width){
+  width: $width;
+}
+
+@mixin set-width-height($width, $height){
+  width: $width;
+  height: $height;
+}
+
+@mixin placeholder($color, $fontSize){
+  input::-webkit-input-placeholder, textarea::-webkit-input-placeholder{
+    color:$color;
+    font-size: $fontSize;
+  }
+  input:-moz-placeholder,textarea:-moz-placeholder{   /* Mozilla Firefox 19+ */
+    color:$color;
+    font-size: $fontSize;
+  }
+  input::-moz-placeholder, textarea::-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
+    color:$color;
+    font-size: $fontSize;
+  }
+  input:-ms-input-placeholder, textarea:-ms-input-placeholder{  /* Internet Explorer 10-11 */
+    color:$color;
+    font-size: $fontSize;
+  }
+}
+
+@mixin box-shadow($box-shadow){
+  -moz-box-shadow: $box-shadow;
+  -webkit-box-shadow: $box-shadow;
+  box-shadow: $box-shadow;
+}
+
+/**************wyf******************/
+/* 公屏-- 小模块透明背景及内边距样式*/
+@mixin conponent_background{
+  background-color: rgba(19, 19, 19, 0.65);
+  padding:10px;
+  border-radius: 8px;
+}
+/**************wyf******************/
+
+/* 设置背景图片 */
+@mixin setBgImg($imgPath){
+  background-image: url(#{$static_url}#{$imgPath});
+}
+
+/* 设置背景图片 */
+@mixin setImgSrc($imgPath){
+  content:  url(#{$static_url}#{$imgPath});
+}
+
+@mixin singleLine(){
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+@mixin window-box() {
+  @include layout-flex-c;
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border-right: 76px solid transparent;
+  border-top: 35px solid transparent;
+  border-bottom: 50px solid transparent;
+}
+
+@mixin box-panel() {
+  @include layout-flex-c;
+  border-radius: 0 8px 8px 0;
+  background: $second-background;
+  border-right: 1px solid #291f28;
+  flex: 1;
+}
+@mixin box-center($x,$y){
+  top: $x;
+  left: $y;
+  transform: translate(-$y,-$x);
+  -webkit-transform: translate(-$y,-$x);
+  -o-transform: translate(-$y,-$x);
+  -moz-transform: translate(-$y,-$x);
+  -ms-transform: translate(-$y,-$x);
+}
+
+@mixin window() {
+  @include layout-flex-c;
+  position: absolute;
+  z-index: 199;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin panel() {
+  @include layout-flex-c;
+  background: $second-background;
+  flex: 1;
+}
+
+@mixin content() {
+  width: 100%;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.icon-man{
+  color: #086D99;
+  font-size: 25px;
+}
+.icon-woman{
+  color: #8E1250;
+  font-size: 25px;
+}
